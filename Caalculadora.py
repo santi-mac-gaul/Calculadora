@@ -1,27 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import math
-def set_open_parent():
-        """Metódo para setar a abertura de parenteses no input"""
-        if entrada2.get() == 'SyntaxError':
-            return 
 
-        if entrada2.get() == '0':
-            entrada2.delete(0)
-            entrada2.insert(len(entrada2.get()), '(')
-        elif entrada2.get()[-1] in '+-/*':
-
-            entrada2.insert(len(entrada2.get()), '(')
-    
-def set_close_parent():
-        """Metódo para setar o fechamento de parenteses no input"""
-        if entrada2.get() == 'SyntaxError':
-            return
-
-        if entrada2.get().count('(') <= entrada2.get().count(')'):
-            return
-        if entrada2.get()[-1] not in '+-/*(':
-            entrada1.insert(len(entrada2.get()), ')')
 def IngresarValores(tecla):
     if tecla >= "0" and tecla <= "9" or tecla == ')' or tecla == '(' or tecla == '.':
         entrada2.set(entrada2.get() + tecla)
